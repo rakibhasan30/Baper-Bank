@@ -14,15 +14,21 @@
           <div class="flex justify-center gap-10 items-center">
             <div class="bg-[#5a88eb] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
               <h1 class="text-white font-bold text-2xl mb-3">Deposit</h1>
-              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">
+                $<span id="current-deposit">00.00</span>
+              </h1>
             </div>
             <div class="bg-[#4D4856] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
               <h1 class="text-white font-bold text-2xl mb-3">Withdraw</h1>
-              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">
+                $<span id="current-withdraw">00.00</span>
+              </h1>
             </div>
             <div class="bg-[#BA75BC] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
               <h1 class="text-white font-bold text-2xl mb-3">Balance</h1>
-              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">
+                $<span id="current-balance">1200.00</span>
+              </h1>
             </div>
           </div>
           <div class="flex justify-center gap-10 items-center w-full">
@@ -34,12 +40,13 @@
               </h1>
               <input
                 type="text"
-                id="deposit-amount"
-                class="w-full rounded-xl h-10 placeholder:pl-4"
+                id="deposit-field"
+                class="w-full rounded-xl h-10 p-4"
                 placeholder="Enter deposit amount"
               />
               <button
                 class="bg-white text-[#5a88eb] font-bold text-lg rounded-2xl py-3 px-8 self-center mt-6"
+                id="deposit-button"
               >
                 Deposit
               </button>
@@ -52,11 +59,12 @@
               </h1>
               <input
                 type="text"
-                id="deposit-amount"
-                class="w-full rounded-xl h-10 placeholder:pl-4"
+                id="withdraw-field"
+                class="w-full rounded-xl h-10 p-4"
                 placeholder="Enter withdraw amount"
               />
               <button
+                id="withdraw-button"
                 class="bg-white text-[#BA75BC] font-bold text-lg rounded-2xl py-3 px-8 self-center mt-6"
               >
                 Withdraw
@@ -73,5 +81,6 @@
       Logout
     </button>
     <script src="./logout.js"></script>
+    <script src="./calculation.js"></script>
   </body>
 </html>
