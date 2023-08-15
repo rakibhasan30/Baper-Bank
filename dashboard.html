@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Baper Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[url('./images/dashboard.png')] bg-no-repeat bg-bottom">
+    <main class="h-screen flex flex-col gap-10 ml-36 pt-24">
+      <div class="w-1/2">
+        <div class="flex flex-col gap-10">
+          <img src="./images/logo.png" alt="" class="w-44 self-center" />
+          <div class="flex justify-center gap-10 items-center">
+            <div class="bg-[#5a88eb] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
+              <h1 class="text-white font-bold text-2xl mb-3">Deposit</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+            </div>
+            <div class="bg-[#4D4856] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
+              <h1 class="text-white font-bold text-2xl mb-3">Withdraw</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+            </div>
+            <div class="bg-[#BA75BC] rounded-3xl py-6 px-6 w-80 drop-shadow-xl">
+              <h1 class="text-white font-bold text-2xl mb-3">Balance</h1>
+              <h1 class="text-white font-bold text-5xl mb-3">$00.00</h1>
+            </div>
+          </div>
+          <div class="flex justify-center gap-10 items-center w-full">
+            <div
+              class="bg-[#5a88eb] rounded-3xl py-6 px-6 flex flex-col justify-center items-start w-1/2 h-64 drop-shadow-xl"
+            >
+              <h1 class="text-white font-bold text-2xl mb-3 self-center">
+                Please Deposit
+              </h1>
+              <input
+                type="text"
+                id="deposit-amount"
+                class="w-full rounded-xl h-10 placeholder:pl-4"
+                placeholder="Enter deposit amount"
+              />
+              <button
+                class="bg-white text-[#5a88eb] font-bold text-lg rounded-2xl py-3 px-8 self-center mt-6"
+              >
+                Deposit
+              </button>
+            </div>
+            <div
+              class="bg-[#BA75BC] rounded-3xl py-6 px-6 flex flex-col justify-center items-start w-1/2 h-64 drop-shadow-xl"
+            >
+              <h1 class="text-white font-bold text-2xl mb-3 self-center">
+                Please Withdraw
+              </h1>
+              <input
+                type="text"
+                id="deposit-amount"
+                class="w-full rounded-xl h-10 placeholder:pl-4"
+                placeholder="Enter withdraw amount"
+              />
+              <button
+                class="bg-white text-[#BA75BC] font-bold text-lg rounded-2xl py-3 px-8 self-center mt-6"
+              >
+                Withdraw
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <button
+      class="border border-[#BA75BC] absolute top-24 right-36 py-2 px-6 rounded-3xl font-semibold text-[#BA75BC]"
+      id="logout"
+    >
+      Logout
+    </button>
+    <script src="./logout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Baper Bank</title>
+  </head>
+  <body
+    class="bg-[url('./images/BG.png')] relative h-screen bg-no-repeat bg-bottom"
+  >
+    <div
+      class="bg-[#BA75BC] h-96 w-96 rounded-3xl absolute top-48 flex flex-col justify-center p-4 gap-8 left-1/4 items-start outline outline-1 outline-[#BA75BC] outline-offset-4 hover:shadow-2xl"
+    >
+      <h1 class="text-white text-2xl font-bold self-center">Please login!</h1>
+      <input
+        type="email"
+        name=""
+        id="email"
+        placeholder="Enter your Email"
+        class="p-3 rounded-xl self-stretch placeholder:text-sm placeholder:opacity-75 focus:outline-[#BA75BC] focus:border-l-8 border-[#5a88eb]"
+      />
+      <input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Enter your Password"
+        class="p-3 rounded-xl self-stretch placeholder:text-sm placeholder:opacity-75 focus:outline-[#BA75BC] focus:border-l-8 border-[#5a88eb]"
+      />
+      <button
+        id="button-submit"
+        class="p-2 bg-white w-32 rounded-lg text-[#BA75BC] text-lg font-bold hover:shadow-2xl self-center hover:outline outline-1 outline-white outline-offset-2"
+      >
+        Login
+      </button>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
