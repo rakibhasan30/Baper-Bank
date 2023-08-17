@@ -6,7 +6,7 @@ document
     const depositAmount = depositField.value;
     depositField.value = "";
 
-    if (isNaN(depositAmount) || depositAmount === "") {
+    if (isNaN(depositAmount) || depositAmount === "" || depositAmount < 0) {
       alert("Please enter a valid number");
       return;
     }
@@ -36,7 +36,7 @@ document
 
     withdrawField.value = "";
 
-    if (isNaN(withdrawAmount) || withdrawAmount === "") {
+    if (isNaN(withdrawAmount) || withdrawAmount === "" || withdrawAmount < 0) {
       alert("Please enter a valid number");
       return;
     }
