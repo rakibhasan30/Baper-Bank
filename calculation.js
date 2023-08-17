@@ -26,16 +26,23 @@ document
   .addEventListener("click", function () {
     const balanceField = document.getElementById("current-balance");
     const balanceAmount = balanceField.innerText;
+    console.log(balanceAmount);
 
     const withdrawField = document.getElementById("withdraw-field");
     const withdrawAmount = withdrawField.value;
+    console.log(withdrawAmount);
 
     const currentWithdraw = document.getElementById("current-withdraw");
     const withdraw = currentWithdraw.innerText;
+    withdrawField.value = "";
 
-    const totalWithdraw = parseFloat(withdraw) + parseFloat(withdrawAmount);
-    currentWithdraw.innerText = totalWithdraw.toFixed(2);
-    var totalBalance = parseFloat(balanceAmount) - parseFloat(withdrawAmount);
+    if (parseFloat(withdrawAmount) <= parseFloat(balanceAmount)) {
+      const totalWithdraw = parseFloat(withdraw) + parseFloat(withdrawAmount);
+      currentWithdraw.innerText = totalWithdraw.toFixed(2);
+      var totalBalance = parseFloat(balanceAmount) - parseFloat(withdrawAmount);
 
-    balanceField.innerText = totalBalance.toFixed(2);
+      balanceField.innerText = totalBalance.toFixed(2);
+    } else {
+      alert("insufficient Balance");
+    }
   });
