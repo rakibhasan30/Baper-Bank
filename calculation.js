@@ -33,13 +33,9 @@ document
     const currentWithdraw = document.getElementById("current-withdraw");
     const withdraw = currentWithdraw.innerText;
 
-    if (withdrawAmount <= balanceAmount) {
-      const totalWithdraw = parseFloat(withdraw) + parseFloat(withdrawAmount);
-      currentWithdraw.innerText = totalWithdraw.toFixed(2);
-      var totalBalance = parseFloat(balanceAmount) - parseFloat(withdrawAmount);
+    const totalWithdraw = parseFloat(withdraw) + parseFloat(withdrawAmount);
+    currentWithdraw.innerText = totalWithdraw.toFixed(2);
+    var totalBalance = parseFloat(balanceAmount) - parseFloat(withdrawAmount);
 
-      balanceField.innerText = totalBalance.toFixed(2);
-    } else {
-      alert("Insufficient Balance!");
-    }
+    balanceField.innerText = totalBalance.toFixed(2);
   });
