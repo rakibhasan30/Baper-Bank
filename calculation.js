@@ -4,6 +4,12 @@ document
   .addEventListener("click", function () {
     const depositField = document.getElementById("deposit-field");
     const depositAmount = depositField.value;
+    depositField.value = "";
+
+    if (isNaN(depositAmount) || depositAmount === "") {
+      alert("Please enter a valid number");
+      return;
+    }
 
     const currentDeposit = document.getElementById("current-deposit");
     const deposit = currentDeposit.innerText;
@@ -16,8 +22,6 @@ document
 
     var totalBalance = parseFloat(balanceAmount) + parseFloat(depositAmount);
     balanceField.innerText = totalBalance.toFixed(2);
-
-    depositField.value = "";
   });
 
 // Withdraw
@@ -26,15 +30,19 @@ document
   .addEventListener("click", function () {
     const balanceField = document.getElementById("current-balance");
     const balanceAmount = balanceField.innerText;
-    console.log(balanceAmount);
 
     const withdrawField = document.getElementById("withdraw-field");
     const withdrawAmount = withdrawField.value;
-    console.log(withdrawAmount);
+
+    withdrawField.value = "";
+
+    if (isNaN(withdrawAmount) || withdrawAmount === "") {
+      alert("Please enter a valid number");
+      return;
+    }
 
     const currentWithdraw = document.getElementById("current-withdraw");
     const withdraw = currentWithdraw.innerText;
-    withdrawField.value = "";
 
     if (parseFloat(withdrawAmount) <= parseFloat(balanceAmount)) {
       const totalWithdraw = parseFloat(withdraw) + parseFloat(withdrawAmount);
